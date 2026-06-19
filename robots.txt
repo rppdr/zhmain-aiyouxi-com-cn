@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://rppdr.github.io/zhmain-aiyouxi-com-cn/sitemap.xml

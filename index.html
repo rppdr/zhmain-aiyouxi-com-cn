@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 信息索引与资料整理</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #1e2a3a;
+      background-color: #f7f9fc;
+    }
+
+    /* 深色头图 hero */
+    .hero {
+      background: #0b1622;
+      color: #e5edf5;
+      padding: 4rem 2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #2f7fbf, #6a9fd8, #2f7fbf);
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 1.2rem auto 0;
+      color: #b6c9de;
+      line-height: 1.6;
+    }
+
+    .hero .highlight-link {
+      display: inline-block;
+      margin-top: 2rem;
+      background: transparent;
+      border: 1px solid #6a9fd8;
+      padding: 0.6rem 2rem;
+      border-radius: 40px;
+      color: #b6d4f0;
+      text-decoration: none;
+      font-weight: 400;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .hero .highlight-link:hover {
+      background: #1f3f5e;
+      color: white;
+    }
+
+    /* 浅色正文区容器 */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+    }
+
+    /* 优势区 / 卡片网格 */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem 1.6rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 1px 3px rgba(0, 0, 0, 0.02);
+      transition: transform 0.15s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      color: #0b1b2b;
+      border-left: 4px solid #2f7fbf;
+      padding-left: 0.8rem;
+    }
+
+    .card p {
+      font-size: 0.98rem;
+      color: #2f3f50;
+    }
+
+    /* 说明区 + FAQ 摘要 */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 450;
+      margin: 3rem 0 1.5rem;
+      color: #0f1e2e;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #2f7fbf;
+      margin-top: 0.5rem;
+    }
+
+    .desc-block {
+      background: white;
+      border-radius: 24px;
+      padding: 2rem 2.2rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      color: #1f2e3e;
+      font-size: 1.05rem;
+    }
+
+    .desc-block p {
+      margin-bottom: 1rem;
+    }
+
+    .faq-item {
+      margin: 1.8rem 0;
+      border-bottom: 1px solid #e2e9f0;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-item strong {
+      display: block;
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: #0b1b2b;
+      margin-bottom: 0.4rem;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: #2d3f52;
+    }
+
+    .link-em {
+      color: #1f6dad;
+      text-decoration: none;
+      font-weight: 450;
+      border-bottom: 1px solid transparent;
+      transition: border 0.15s;
+    }
+
+    .link-em:hover {
+      border-bottom: 1px solid #1f6dad;
+    }
+
+    .footnote {
+      margin-top: 4rem;
+      padding: 2rem 0 1rem;
+      border-top: 1px solid #dce3ed;
+      font-size: 0.92rem;
+      color: #3f4f62;
+    }
+
+    .footnote a {
+      color: #1f6dad;
+      text-decoration: none;
+    }
+
+    .footnote a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1.05rem;
+      }
+      .container {
+        padding: 1.5rem 1.2rem;
+      }
+      .desc-block {
+        padding: 1.5rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>爱游戏 · 资料索引</h1>
+    <p>从散落的信息中梳理脉络，为游戏爱好者和研究者提供一份有温度的内容导航。</p>
+    <a href="https://zhmain-aiyouxi.com.cn" class="highlight-link">爱游戏</a>
+  </header>
+
+  <main class="container">
+    <!-- 优势区：整理视角 -->
+    <div class="grid-3">
+      <div class="card">
+        <h3>分类梳理</h3>
+        <p>按照类型、年代、平台等维度整理游戏信息，降低寻找特定内容的门槛，让资料更有序可循。</p>
+      </div>
+      <div class="card">
+        <h3>索引结构</h3>
+        <p>以链接与摘要结合的方式呈现，方便快速定位感兴趣的方向，减少在海量信息中的迷失感。</p>
+      </div>
+      <div class="card">
+        <h3>持续更新</h3>
+        <p>保持对游戏领域新动态的关注，定期补充和调整整理内容，让资料库拥有生命力。</p>
+      </div>
+    </div>
+
+    <!-- 说明区：从资料整理和信息索引切入 -->
+    <h2 class="section-title">为什么做这件事</h2>
+    <div class="desc-block">
+      <p>
+        玩游戏的人大多有过这样的体验：想回顾一款老游戏的设定，或是想了解某个系列的发展脉络，却发现信息零散分布在论坛、百科、个人博客甚至视频里。作为一个热爱游戏的人，我希望通过系统化的整理，把这些碎片重新拼接起来，形成清晰的信息路径。
+      </p>
+      <p>
+        <a href="https://zhmain-aiyouxi.com.cn" class="link-em">爱游戏</a> 就是这样一个尝试：它不以推荐或评测为核心，而是更像一个安静的索引库。你可以在这里看到游戏类型的归类、关键作品的简要说明、相关资源的指向，以及一些或许被遗忘的细节。没有排行榜，没有评分，只有靠谱的信息组织和克制的叙述。
+      </p>
+      <p>
+        如果你也享受在资料中漫步的感觉，或者正在做某个游戏课题的功课，这里或许能提供一点帮助。内容仍在不紧不慢地丰富中，每一条梳理都经过核实与筛选。
+      </p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <h2 class="section-title">常见问题摘要</h2>
+
+    <div class="faq-item">
+      <strong>在这里能找到什么类型的游戏信息？</strong>
+      <p>涵盖单机、独立、部分经典网络游戏，侧重作品背景、设定资料和版本变迁。并不追求全而广，更关注信息的可靠和整理深度。</p>
+    </div>
+    <div class="faq-item">
+      <strong>信息索引是主观筛选的吗？</strong>
+      <p>整理过程中会加入一些个人视角，比如更倾向于有文化或设计特色的作品，但会保证每条索引都基于事实，避免过度解读或误导。</p>
+    </div>
+    <div class="faq-item">
+      <strong>是否会收录玩家社群或创作者的内容？</strong>
+      <p>会适度收录一些非官方的优质资料、访谈或怀旧文章，并在显眼位置标注来源，让索引不仅限于商业发布信息。</p>
+    </div>
+
+    <!-- 底部链接 -->
+    <footer class="footnote">
+      <p>站点内容遵循克制与真实的原则，不设广告，不接受置换推荐。若想进一步浏览或参与建议，可前往 <a href="https://zhmain-aiyouxi.com.cn">爱游戏</a> 页面。</p>
+      <p style="margin-top: 0.8rem;">&copy; 2025 · 一个安静的索引角落</p>
+    </footer>
+  </main>
+</body>
+</html>
