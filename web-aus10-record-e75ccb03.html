@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>澳洲幸运10 · 查询对照与延伸阅读</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+      background: #f2f4f7;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* Hero */
+    .hero {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 3.2rem 2.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 8px 24px rgba(0,0,0,0.04);
+      margin-bottom: 2.5rem;
+      border: 1px solid #e9edf2;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+      color: #0f172a;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      color: #475569;
+      max-width: 640px;
+      margin-bottom: 1.8rem;
+    }
+
+    .hero .tagline {
+      display: inline-block;
+      background: #eef2f6;
+      padding: 0.25rem 1rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      color: #334155;
+      border: 1px solid #dce2ea;
+    }
+
+    /* 通用卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 1.75rem 1.6rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 6px 16px rgba(0,0,0,0.03);
+      border: 1px solid #e4e9f0;
+      transition: box-shadow 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 12px 28px rgba(0,0,0,0.04);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: #0f172a;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #334155;
+    }
+
+    .card .tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      background: #f1f4f9;
+      padding: 0.2rem 0.7rem;
+      border-radius: 40px;
+      color: #475569;
+      margin-top: 0.5rem;
+      border: 1px solid #e0e6ee;
+    }
+
+    /* 双栏说明区 */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.5rem;
+      margin-bottom: 2.2rem;
+    }
+
+    .info-block {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 1.8rem 1.6rem;
+      border: 1px solid #e4e9f0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.01), 0 6px 16px rgba(0,0,0,0.03);
+    }
+
+    .info-block h4 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #0f172a;
+    }
+
+    .info-block p, .info-block li {
+      font-size: 0.92rem;
+      color: #334155;
+    }
+
+    .info-block ul {
+      padding-left: 1.2rem;
+      margin: 0.4rem 0 0.2rem 0;
+    }
+
+    .info-block li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* FAQ 摘要 */
+    .faq-summary {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 1.8rem 1.6rem;
+      border: 1px solid #e4e9f0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.01), 0 6px 16px rgba(0,0,0,0.03);
+      margin-bottom: 2.2rem;
+    }
+
+    .faq-summary h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #0f172a;
+    }
+
+    .faq-item {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #edf0f5;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-item .q {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #1e293b;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-item .a {
+      font-size: 0.9rem;
+      color: #475569;
+    }
+
+    /* 底部链接 */
+    .footer-links {
+      padding-top: 0.8rem;
+      border-top: 1px solid #e0e6ee;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .footer-links a {
+      color: #1e293b;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px dotted #b8c4d4;
+    }
+
+    .footer-links a:hover {
+      border-bottom: 1px solid #0f172a;
+    }
+
+    .footer-links .meta {
+      color: #94a3b8;
+      font-size: 0.8rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 800px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 2.2rem 1.6rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      body {
+        padding: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+      .card, .info-block, .faq-summary {
+        padding: 1.3rem 1.2rem;
+      }
+      .footer-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Hero -->
+  <div class="hero">
+    <span class="tagline">日常查询 · 对照 · 延伸阅读</span>
+    <h1>澳洲幸运10 · 数据与参考</h1>
+    <p class="sub">一个面向日常使用的轻量信息页，提供基础对照、常见问题与背景说明。所有内容仅供个人参考，不构成任何建议。</p>
+  </div>
+
+  <!-- 优势区 / 特点 -->
+  <div class="card-grid">
+    <div class="card">
+      <h3>快速对照</h3>
+      <p>简明排列常用对应关系，省去来回切换的麻烦。适合在阅读或记录时顺手查阅，保持思路连贯。</p>
+      <span class="tag">参考工具</span>
+    </div>
+    <div class="card">
+      <h3>应用场景</h3>
+      <p>不论是在整理个人笔记、进行数据推演，还是做背景延伸，都可以将本页作为辅助素材的一部分。</p>
+      <span class="tag">延伸阅读</span>
+    </div>
+    <div class="card">
+      <h3>内容原则</h3>
+      <p>采用中性表述，不渲染、不暗示，仅提供基础事实与通用解释。适合希望获得客观信息的读者。</p>
+      <span class="tag">简洁专业</span>
+    </div>
+    <div class="card">
+      <h3>持续更新</h3>
+      <p>页面结构保持稳定，内容会定期审核并补充细节，确保参考信息的时效性与基本准确度。</p>
+      <span class="tag">维护中</span>
+    </div>
+  </div>
+
+  <!-- 说明区（双栏） -->
+  <div class="two-col">
+    <div class="info-block">
+      <h4>关于澳洲幸运10</h4>
+      <p>「澳洲幸运10」是一种基于数字范围的随机对照体系，通常用作分析、推演或娱乐性参考。其核心是 1–10 的随机对照关系，广泛应用于个人数据练习、逻辑推演以及背景延伸阅读。</p>
+      <p style="margin-top:0.6rem;">在专业语境下，它常被用作培养数字敏感度的辅助工具，或作为开放式讨论的起点。本页不提供任何预测或建议，仅呈现基础框架。</p>
+    </div>
+    <div class="info-block">
+      <h4>使用提示</h4>
+      <ul>
+        <li>所有对照关系仅供参考，不保证与任何实际结果一致。</li>
+        <li>请勿将本页内容用于非法或误导性活动。</li>
+        <li>建议结合其他可靠来源交叉验证。</li>
+        <li>若发现内容偏差，可通过底部渠道反馈。</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-summary">
+    <h4>常见问题（摘要）</h4>
+    <div class="faq-item">
+      <div class="q">澳洲幸运10 的数据来源是什么？</div>
+      <div class="a">本页数据基于通用数字对照关系整理，不依赖任何特定平台或实时接口。所有内容均为静态参考，不追踪实时变化。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">页面内容多久更新一次？</div>
+      <div class="a">基础结构长期稳定，细节部分会根据需要不定期调整。更新日志可在底部链接查看。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">我可以将本页内容用于自己的项目吗？</div>
+      <div class="a">页面提供的通用参考信息属于公共知识范畴，但建议在引用时注明来源。具体引用方式请参照相关规范。</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">还有更多问题？</div>
+      <div class="a">可查阅完整 FAQ 页面（通过底部链接），或参考关于 <a href="https://web-aus10.com" style="color:#1e293b;text-decoration:underline;font-weight:500;">澳洲幸运10</a> 的更详细介绍。</div>
+    </div>
+  </div>
+
+  <!-- 底部链接 -->
+  <div class="footer-links">
+    <div>
+      <a href="https://web-aus10.com">澳洲幸运10</a> · 基础参考页
+    </div>
+    <div class="meta">
+      内容仅供个人学习参考 · 不构成任何建议
+    </div>
+  </div>
+</div>
+</body>
+</html>
