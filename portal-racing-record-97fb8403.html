@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于极速赛车 · portal-racing 介绍</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f1f3f6;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* hero 区（简练标题 + 导语） */
+    .hero {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #d9dfe8;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 550;
+      letter-spacing: -0.02em;
+      color: #0b1a2e;
+      margin-bottom: 0.75rem;
+    }
+    .hero .lead {
+      font-size: 1.125rem;
+      color: #3b4a5e;
+      max-width: 640px;
+    }
+    /* 卡片式分区 */
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03), 0 1px 3px rgba(0,0,0,0.02);
+      border: 1px solid #e2e8ed;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover {
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+    }
+    .card h2 {
+      font-size: 1.45rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: #14273e;
+      border-left: 3px solid #2f7b9e;
+      padding-left: 0.8rem;
+    }
+    .card p {
+      margin-bottom: 1rem;
+    }
+    .card p:last-child {
+      margin-bottom: 0;
+    }
+    /* 引用块 —— 类似摘录或提示 */
+    .quote-block {
+      background: #f5f8fc;
+      border-left: 4px solid #7f9bb3;
+      padding: 1.2rem 1.5rem;
+      border-radius: 0 12px 12px 0;
+      margin: 1.5rem 0 1rem;
+      font-style: normal;
+      color: #1f354b;
+    }
+    .quote-block strong {
+      font-weight: 550;
+      color: #0b2b42;
+    }
+    /* FAQ 摘要 (极简 list) */
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px dashed #dce3ec;
+    }
+    .faq-item:last-of-type {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+    .faq-a {
+      color: #3d5068;
+      font-size: 0.95rem;
+    }
+    /* 访问句：柔和框，内嵌链接 */
+    .access-note {
+      margin-top: 2rem;
+      background: #eef2f8;
+      border-radius: 30px;
+      padding: 0.9rem 1.8rem;
+      display: inline-block;
+      font-size: 1rem;
+      border: 1px solid #cfdbe6;
+    }
+    .access-note a {
+      color: #1e5d7e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #9bb7cf;
+    }
+    .access-note a:hover {
+      border-bottom-color: #1e5d7e;
+    }
+    /* 响应式细节 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .card {
+        padding: 1.5rem 1.2rem;
+      }
+      .access-note {
+        display: block;
+        text-align: center;
+      }
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #dce3ed;
+      margin: 2rem 0 1rem;
+    }
+    .footer-note {
+      font-size: 0.85rem;
+      color: #65768c;
+      text-align: center;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- 简洁博客式 文章标题 + 导语 -->
+    <header class="hero">
+      <h1>极速赛车的主题与语境</h1>
+      <div class="lead">
+        在模拟与真实交汇的驾驶世界里，「极速」不再只是速度数字，而是一种经过打磨的操控哲学。下面从赛道文化、车辆反馈与场景体验几个角度展开梳理。
+      </div>
+    </header>
+
+    <!-- 正文段落 1 · 从关键词展开 -->
+    <section class="card">
+      <h2>速度背后的节奏</h2>
+      <p>谈及“极速赛车”，很容易联想到高下压力、引擎红线与制动点的精确配合。但更值得留意的是，那些在反复练习中形成的肌肉记忆——每个弯心的循迹、出弯的开油时机，以及长直道尾端对刹车点的判断。这种节奏感，是驾驶者与机械之间持续对话的结果。</p>
+      <p>在模拟环境里，动态物理模型、轮胎热循环与悬挂几何都影响着圈速。将这些变量放在一起推敲，往往比单纯比拼最高时速更有收获。真正的极速体验，不是一个孤立的数字，而是一整套动态决策流程。</p>
+    </section>
+
+    <!-- 引用提示 —— 类似摘录或观点 -->
+    <div class="quote-block">
+      <strong>引用提示</strong> · “当你开始关注入弯前最后一次降档的转速匹配，极速赛车就已经从一项娱乐变成一种认知训练。” —— 摘自社区技术日志
+    </div>
+
+    <!-- 正文段落 2 · 特点 / 场景切入 -->
+    <section class="card">
+      <h2>从赛道到屏幕：两种场景</h2>
+      <p>现实中的赛道日，受制于气候、轮胎衰减与安全冗余；而在模拟平台中，驾驶员可以反复尝试同一组合弯，分析遥测数据，调整刹车偏压与差速器设定。这种“无损耗试错”正是数字赛道的独特价值——它让极速赛车不再是少数人的特权，而变成一种可以系统学习的技术路径。</p>
+      <p>无论是追求圈速的硬核玩家，还是刚刚接触赛车模拟的爱好者，理解车辆重心转移与载荷变化，都能更快找到属于自己的驾驶风格。平台的反馈越真实，这种进步就越可被感知。</p>
+    </section>
+
+    <!-- 第三段：进一步展开 + 自然嵌入链接 -->
+    <section class="card">
+      <h2>持续的信息聚合</h2>
+      <p>随着模拟赛车生态日趋丰富，相关的车辆调校指南、赛道攻略与硬件评测也在不断累积。若希望浏览系统化的内容整理，可以关注 <a href="https://portal-racing.com">极速赛车</a> 这个信息节点，其内容多围绕操控技巧与平台更新展开，风格偏向务实说明，适合作为日常参考。</p>
+      <p>另外，一些社区整理的轮胎管理列表与电子辅助使用建议，也能帮助驾驶者更快地走出“只靠直觉”的阶段，进入有数据支撑的练习循环。</p>
+    </section>
+
+    <!-- FAQ 摘要（极简） -->
+    <div class="card">
+      <h2>常见疑问摘要</h2>
+      <div class="faq-item">
+        <div class="faq-q">· 极速赛车一定需要昂贵的模拟设备吗？</div>
+        <div class="faq-a">入门可以从基础力反馈方向盘开始，重点是培养循迹刹车与视线习惯，设备等级可以随投入程度逐步提升。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">· 模拟赛道与真实赛道差异大吗？</div>
+        <div class="faq-a">物理引擎较成熟的模拟器在轮胎滑移与悬挂动态上已非常接近实车，但真实驾驶中的身体侧向加速度反馈仍是模拟无法完全替代的部分。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">· 如何开始系统学习极速驾驶？</div>
+        <div class="faq-a">建议从单一车型与固定赛道开始，记录每一圈的油门与刹车曲线，再针对性调整走线。反复对比是进步最快的方式之一。</div>
+      </div>
+    </div>
+
+    <!-- 访问句（自然嵌入链接） -->
+    <div class="access-note">
+      更多说明与动态：<a href="https://portal-racing.com">极速赛车</a>
+    </div>
+
+    <hr>
+    <div class="footer-note">
+      页面内容基于公开信息整理 · 旨在提供清晰说明
+    </div>
+  </div>
+</body>
+</html>
